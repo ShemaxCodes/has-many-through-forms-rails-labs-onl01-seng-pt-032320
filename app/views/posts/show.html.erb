@@ -1,23 +1,21 @@
 
-<h1><%= @post.title %></h1>
-<p><%= @post.content %></p>
+<%= @post.title %>
+<%= @post.content %>
 
 
-<h3>
   <ul>
     <% @post.categories.each do |category| %>
       <li><%= link_to(category.name, category) %></li>
     <% end %>
   </ul>
-</h3>
 
 
-<h2>Comments:</h2><hr>
+
 <ul>
   <% @post.comments.each do |comment| %>
     <li><strong><%= comment.user.username %></strong> says: <%= comment.content %></li>
   <% end %>
-</ul><hr>
+</ul>
 
 
 <h2>Users That Commented:</h2>
